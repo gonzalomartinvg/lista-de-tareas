@@ -1,0 +1,345 @@
+:root{
+    --primary-color: #01579B;
+    --primary-color-light: #faf1f3;
+    --secondary-color: #d1ecfd;
+    --blanco-1: #ffff;
+    --blanco-2: #f8f5f5;
+    --gris-1: #e6e3e3;
+    --gris-2: #3f3f3f;
+    --gris-3: #838383;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    font-family: 'Roboto', sans-serif; 
+    line-height: 1.5rem;
+    color: var(--gris-2);
+}
+
+body {
+    background-image: url(images/background-01-01.svg);
+    background-size: cover;
+}
+
+.contenedor{
+    width: 90%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    border-radius: 10px;
+    justify-items: center;
+    background-color: white;
+    box-shadow: 0.3rem 0.3rem 0.8rem 0.2rem rgb(99, 99, 99);
+}
+
+h1{
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/*FORMULARIO*/
+
+.contenedor-form{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.contenedor-select-tipo-de-tarea{
+    width: 100%;
+    padding-right: 0.5rem;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+
+}
+
+.elegirTipoDeTarea{
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--blanco-1);
+    border: none;
+    border-radius: 10px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+option{
+    background-color: var(--primary-color);
+    color: var(--blanco-1);
+    margin-top: 1rem;
+    border: none;
+    box-shadow: none;
+    background-image: none;
+    outline: none;
+}
+
+.inputResponsable{
+    width: 100%;
+    padding: 0.8rem; 
+    border-radius: 10px 10px 10px 10px; 
+    border: solid 0.5px var(--gris-3); 
+    outline: none;
+}
+
+.inputResponsable:focus{
+    border: solid var(--primary-color);
+}
+
+.contenedor-input{
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.contenedor-input form{
+    width: 100%;
+}
+
+.contenedor-input input{
+    width: 100%;
+    padding: 0.8rem; 
+    border-radius: 10px 0px 0px 10px; 
+    border: solid 0.5px var(--gris-3); 
+    outline: none;
+}
+
+.contenedor-input input:focus{
+    border: solid var(--primary-color);
+}
+
+.boton{
+    width: fit-content;
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    color: var(--blanco-1);
+}
+
+.boton:hover{
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
+/*TAREAS AGREGADAS*/
+
+.contenedor-tareas-agregadas{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-gap: 1.5rem;
+}
+
+.contenedor-tareas-agregadas h2{
+    margin-top: 1rem;
+}
+
+.contenedorTipoDeTareas{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.tipoDeTarea{
+    width: 100%;
+    border: solid var(--gris-3) 1px;
+    border-radius: 10px;
+}
+
+.contenedorGeneralTareas{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--secondary-color);
+}
+
+.colorSuperior{
+    width: 100%;
+    height: 1rem;
+    grid-column: 1/3;
+    background-color: var(--primary-color);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.inputColumnas{
+    width: 11rem;
+    border: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    color: var(--gris-2);
+    font-size: 1.2rem;
+    background-color: var(--secondary-color);
+    outline: none;
+}
+
+.inputColumnas::-webkit-input-placeholder {
+    opacity:1;
+    color: var(--gris-2);
+} /* WebKit */
+
+.inputColumnas::-moz-placeholder {
+    opacity:1; 
+    color: var(--gris-2);
+} /* Firefox 19+ */
+    
+.inputColumnas:focus{
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    border: solid var(--primary-color);
+}
+
+.editar{
+    color: var(--primary-color);
+    align-self: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.listaTareas{
+    width: 100%;
+    display: grid;
+    padding: 1rem;
+    grid-gap: 0.5rem;
+}
+
+.textoInicial{
+    justify-self: center;
+}
+
+.tareaAgregada{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    grid-gap: 1rem;
+    align-items: center;
+}
+
+.tachar{
+    text-decoration:line-through;
+}
+
+.botonBorrar{
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    cursor: pointer;
+    border-radius: 10px;
+    border: solid 0px;
+    align-self: center;
+}
+
+/*MODAL*/
+
+.contenedor-modal{ /*Es el fondo negro con opacidad*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    z-index: 2;
+    opacity: 0; /*Hacemos que solo se vea con la clase show*/
+    pointer-events: none; /*Le sacamos los atributos clickeables para que solo los tenga con la clase show*/
+    /*ABAJO VAMOS A MEJORAR LA TRANSICIÓN*/
+    transition: opacity .6s .9s; /*Indicamos transición de opacidad suave al abrir y cerrar el modal*/
+    --transform: translateY(-100vh); /*Creamos una propiedad customizada para que baje de arriba el Modal*/
+    --transition: transform .7s; /*Creamos una propiedad customizada para hacer suave la transición que hicimos con transform*/
+}
+
+.contenedor-modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    /*ABAJO VAMOS A MEJORAR LA TRANSICIÓN*/
+    transition: opacity .6s; /*Indicamos transición de opacidad suave al abrir y cerrar el modal*/
+    --transform: translateY(0); /*Creamos una propiedad customizada para que baje de arriba el Modal*/
+    --transition: transform .7s .7s; /*Creamos una propiedad customizada para hacer suave la transición que hicimos con transform*/
+}
+
+.modal{
+    width: 90%;
+    max-width: 40rem;
+    background-color: var(--blanco-1);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgb(59, 58, 58);
+    margin: auto;
+    padding: 1rem;
+    margin-top: 10rem;
+    border-radius: 8px;
+    display: grid;
+    gap: 1rem;
+    transform: var(--transform); /*Agregamos la transición que hicimos para el contenedor*/
+    transition:var(--transition); /*Agregamos la transición que hicimos para el contenedor*/
+}
+
+.modal-close{
+    justify-self: right;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.titulo-modal{
+    color: var(--gris-2);
+    font-size: 1.5rem;
+    text-align: center;
+    justify-self: center;
+}
+
+.contenedor-imagenes-modal{
+    justify-self: center;
+    display: grid;
+}
+
+.imagen-modal{
+    width: 8rem;
+    position: relative;
+    animation-name: salto;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+}
+
+@keyframes salto {
+    0% {top: 1rem;}
+    50%{top: 0;}
+    100%{top: 1rem;}
+}
+
+.sombra-robot{
+    width: 10rem;
+    position: relative;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.texto-modal{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 1rem;
+    color: var(--gris-2);
+    line-height: 1.5rem;
+}

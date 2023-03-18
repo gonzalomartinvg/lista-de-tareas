@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Bloque para cargar tareas -->
+
+    <div class="contenedor">
+
+        <h1>Lista de tareas</h1>
+
+        <div class="contenedor-form">
+
+            <div class="contenedor-select-tipo-de-tarea">
+            
+                <select class="elegirTipoDeTarea" name="select" required>
+                    <option value="none" selected hidden>Elegí el tipo de tarea pendiente</option>
+                    <option id="select-1" value="tipo1">Urgente</option>
+                    <option id="select-2" value="tipo2">Para hoy</option>
+                    <option id="select-3" value="tipo3">Para la próxima semana</option>
+                    <option id="select-4" value="tipo4">Para el próximo mes</option>
+                </select>
+
+            </div>
+
+            <form action="">
+                <input class="inputResponsable" type="text" placeholder="¿Quién es el responsable?" required>
+            </form>
+
+            <div class="contenedor-input">
+                <form action="">
+                    <input id="inputPrincipal" type="text" placeholder="Describí la tarea" required>
+                </form>
+    
+                <button id="botonPrincipal" class="boton">
+                    +
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="contenedor">
+        
+        <!-- Tareas agregadas -->
+
+        <div class="contenedor-tareas-agregadas">
+
+            <h2>Tareas pendientes</h2>
+
+            <div class="contenedorTipoDeTareas">
+
+                <div class="tipoDeTarea">
+
+                    <div class="contenedorGeneralTareas">
+                        <span class="colorSuperior"></span>
+                        <input class="inputColumnas" type="text" data-valor="1" disabled placeholder="Urgente">
+                        <span class="material-symbols-outlined editar">edit</span>
+                    </div>
+
+                    <div id="tipo1" class="listaTareas">
+                        
+                        <!-- Acá van las tareas que agrega el usuario -->
+                        
+                        <p class="textoInicial">No tenés tareas pendientes</p>  <!-- Texto inicial -->
+                    
+                    </div> 
+
+                </div>
+
+                <div class="tipoDeTarea">
+
+                    <div class="contenedorGeneralTareas">
+                        <span class="colorSuperior"></span>
+                        <input class="inputColumnas" type="text" data-valor="2" disabled placeholder="Para hoy">
+                        <span class="material-symbols-outlined editar">edit</span>
+                    </div>
+
+                    <div id="tipo2" class="listaTareas"><!-- Acá van las tareas que agrega el usuario -->
+                        
+                        <p class="textoInicial">No tenés tareas pendientes</p>  <!-- Texto inicial -->
+
+                    </div> 
+
+                </div>
+
+                <div class="tipoDeTarea">
+
+                    <div class="contenedorGeneralTareas">
+                        <span class="colorSuperior"></span>
+                        <input class="inputColumnas" type="text" data-valor="3" disabled placeholder="Próxima semana">
+                        <span class="material-symbols-outlined editar">edit</span>
+                    </div>
+
+                    <div id="tipo3" class="listaTareas"><!-- Acá van las tareas que agrega el usuario -->
+
+                        <p class="textoInicial">No tenés tareas pendientes</p>  <!-- Texto inicial -->
+
+                    </div> 
+
+                </div>
+
+                <div class="tipoDeTarea">
+
+                    <div class="contenedorGeneralTareas">
+                        <span class="colorSuperior"></span>
+                        <input class="inputColumnas" type="text" data-valor="4" disabled placeholder="Próximo mes">
+                        <span class="material-symbols-outlined editar">edit</span>
+                    </div>
+
+                    <div id="tipo4" class="listaTareas"><!-- Acá van las tareas que agrega el usuario -->
+                        
+                        <p class="textoInicial">No tenés tareas pendientes</p>  <!-- Texto inicial -->
+
+                    </div> 
+
+                </div>
+                
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL-->
+
+    <div class="contenedor-modal">
+
+        <div class="modal">
+
+            <a class="modal-close" href="">X</a>
+            <h2 class="titulo-modal">Completá todos los datos de la tarea</h2>
+            <div class="contenedor-imagenes-modal"><img class="imagen-modal" src="images/robot-lupa.svg" alt=""><img class="sombra-robot" src="images/sombra-robot.svg" alt=""></div>
+
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
+
