@@ -343,3 +343,23 @@ option{
     color: var(--gris-2);
     line-height: 1.5rem;
 }
+
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
+}
+
+.hipervinculo-footer{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+.hipervinculo-footer:hover{
+    color: #012c4d;
+}
